@@ -14,6 +14,8 @@ NOTIFY_WHEN = (
 
 class Crawler(models.Model):
 
+    email = models.EmailField()
+    key = models.CharField(max_length=255)
     url = models.TextField()
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
